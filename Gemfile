@@ -11,4 +11,5 @@ gem "mongoid", "~> 8.1.2"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "pry-byebug"
 end
