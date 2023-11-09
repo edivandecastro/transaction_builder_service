@@ -28,4 +28,5 @@ rails s
 
 http://localhost:3000/activity_fields
 
-![image](https://github.com/edivandecastro/microservice_activity_api/assets/450446/381b8258-d9b9-45c5-9b57-96f2f11915f0)
+![image](https://github.com/edivandecastro/microservice_activity_api/assets/450446/b0a0ff54-fc91-42f6-a313-5529a8f4dcb7)
+
