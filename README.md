@@ -21,7 +21,7 @@ docker compose up -d
 ```
 
 ```
-rails s
+rails db:seed && rails s
 ```
 
 # End Points
