@@ -3,6 +3,8 @@ class ActivityField
   include Mongoid::Timestamps
 
   field :name, type: String
+  field :group, type: String
 
   embeds_many :attribute_specifications
+  embeds_many :addons
 end
