@@ -145,7 +145,7 @@ accesskey = AttributeSpecification.new(
 
 placeholder = AttributeSpecification.new(
   name: 'placeholder',
-  attribute_type: 'Boolean',
+  attribute_type: 'String',
   value: '',
   values_options: [],
   required: false,
@@ -404,8 +404,10 @@ if ActivityField.find_by(name: 'submit').nil?
   end
 end
 
-if ActivityField.find_by(name: 'text').nil?
-  ActivityField.create!(name: 'text') do |activity_field|
+if ActivityField.find_by(name: 'Text Input').nil?
+  ActivityField.create!(name: 'Text Input', group: 'Text::Inputs') do |activity_field|
+    _type.value = "Form::Input::Text"
+    input_type.value = 'text'
     activity_field.attribute_specifications.push(tag_id)
     activity_field.attribute_specifications.push(name)
     activity_field.attribute_specifications.push(value)
@@ -421,7 +423,6 @@ if ActivityField.find_by(name: 'text').nil?
     activity_field.attribute_specifications.push(autocomplete)
     activity_field.attribute_specifications.push(autofocus)
     activity_field.attribute_specifications.push(spellcheck)
-    activity_field.attribute_specifications.push(label)
     activity_field.attribute_specifications.push(required)
     activity_field.attribute_specifications.push(_readonly)
   end
