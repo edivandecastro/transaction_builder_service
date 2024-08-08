@@ -359,55 +359,83 @@ _readonly = AttributeSpecification.new(
   ]
 )
 
-if ActivityField.find_by(name: 'button').nil?
-  ActivityField.create!(name: 'button') do |activity_field|
-    activity_field.attribute_specifications.push(tag_id)
-    activity_field.attribute_specifications.push(name)
-    activity_field.attribute_specifications.push(value)
-    activity_field.attribute_specifications.push(_class)
-    activity_field.attribute_specifications.push(_type)
-    activity_field.attribute_specifications.push(disabled)
-    activity_field.attribute_specifications.push(input_type)
-    activity_field.attribute_specifications.push(accesskey)
-  end
-end
+# if ActivityField.find_by(name: 'button').nil?
+#   ActivityField.create!(name: 'button') do |activity_field|
+#     activity_field.attribute_specifications.push(tag_id)
+#     activity_field.attribute_specifications.push(name)
+#     activity_field.attribute_specifications.push(value)
+#     activity_field.attribute_specifications.push(_class)
+#     activity_field.attribute_specifications.push(_type)
+#     activity_field.attribute_specifications.push(disabled)
+#     activity_field.attribute_specifications.push(input_type)
+#     activity_field.attribute_specifications.push(accesskey)
+#   end
+# end
 
-if ActivityField.find_by(name: 'reset').nil?
-  ActivityField.create!(name: 'reset') do |activity_field|
-    _type.value = "Form::Input::Reset"
-    input_type.value = 'reset'
+# if ActivityField.find_by(name: 'reset').nil?
+#   ActivityField.create!(name: 'reset') do |activity_field|
+#     _type.value = "Form::Input::Reset"
+#     input_type.value = 'reset'
 
-    activity_field.attribute_specifications.push(tag_id)
-    activity_field.attribute_specifications.push(name)
-    activity_field.attribute_specifications.push(value)
-    activity_field.attribute_specifications.push(_class)
-    activity_field.attribute_specifications.push(_type)
-    activity_field.attribute_specifications.push(disabled)
-    activity_field.attribute_specifications.push(input_type)
-    activity_field.attribute_specifications.push(accesskey)
-  end
-end
+#     activity_field.attribute_specifications.push(tag_id)
+#     activity_field.attribute_specifications.push(name)
+#     activity_field.attribute_specifications.push(value)
+#     activity_field.attribute_specifications.push(_class)
+#     activity_field.attribute_specifications.push(_type)
+#     activity_field.attribute_specifications.push(disabled)
+#     activity_field.attribute_specifications.push(input_type)
+#     activity_field.attribute_specifications.push(accesskey)
+#   end
+# end
 
-if ActivityField.find_by(name: 'submit').nil?
-  ActivityField.create!(name: 'submit') do |activity_field|
-    _type.value = "Form::Input::Submit"
-    input_type.value = 'submit'
+# if ActivityField.find_by(name: 'submit').nil?
+#   ActivityField.create!(name: 'submit') do |activity_field|
+#     _type.value = "Form::Input::Submit"
+#     input_type.value = 'submit'
 
-    activity_field.attribute_specifications.push(tag_id)
-    activity_field.attribute_specifications.push(name)
-    activity_field.attribute_specifications.push(value)
-    activity_field.attribute_specifications.push(_class)
-    activity_field.attribute_specifications.push(_type)
-    activity_field.attribute_specifications.push(disabled)
-    activity_field.attribute_specifications.push(input_type)
-    activity_field.attribute_specifications.push(accesskey)
-  end
-end
+#     activity_field.attribute_specifications.push(tag_id)
+#     activity_field.attribute_specifications.push(name)
+#     activity_field.attribute_specifications.push(value)
+#     activity_field.attribute_specifications.push(_class)
+#     activity_field.attribute_specifications.push(_type)
+#     activity_field.attribute_specifications.push(disabled)
+#     activity_field.attribute_specifications.push(input_type)
+#     activity_field.attribute_specifications.push(accesskey)
+#   end
+# end
 
 if ActivityField.find_by(name: 'Text Input').nil?
-  ActivityField.create!(name: 'Text Input', group: 'Text::Inputs') do |activity_field|
+  ActivityField.create!(name: 'Text Input', ) do |activity_field|
+    activity_field.group = 'Text::Inputs'
+    activity_field.icon_name = 'text-input-button'
     _type.value = "Form::Input::Text"
     input_type.value = 'text'
+    activity_field.attribute_specifications.push(tag_id)
+    activity_field.attribute_specifications.push(name)
+    activity_field.attribute_specifications.push(value)
+    activity_field.attribute_specifications.push(_class)
+    activity_field.attribute_specifications.push(_type)
+    activity_field.attribute_specifications.push(disabled)
+    activity_field.attribute_specifications.push(input_type)
+    activity_field.attribute_specifications.push(placeholder)
+    activity_field.attribute_specifications.push(pattern)
+    activity_field.attribute_specifications.push(maxlength)
+    activity_field.attribute_specifications.push(minlength)
+    activity_field.attribute_specifications.push(size)
+    activity_field.attribute_specifications.push(autocomplete)
+    activity_field.attribute_specifications.push(autofocus)
+    activity_field.attribute_specifications.push(spellcheck)
+    activity_field.attribute_specifications.push(required)
+    activity_field.attribute_specifications.push(_readonly)
+  end
+end
+
+if ActivityField.find_by(name: 'Email Input').nil?
+  ActivityField.create!(name: 'Email Input', ) do |activity_field|
+    activity_field.group = 'Text::Inputs'
+    activity_field.icon_name = 'email-input-button'
+    _type.value = "Form::Input::Email"
+    input_type.value = 'email'
     activity_field.attribute_specifications.push(tag_id)
     activity_field.attribute_specifications.push(name)
     activity_field.attribute_specifications.push(value)
