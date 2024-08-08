@@ -10,6 +10,7 @@ gem "bootsnap", require: false
 gem "mongoid", "~> 8.1.2"
 gem "jbuilder"
 gem "rack-cors"
+gem "panko_serializer"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]

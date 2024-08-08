@@ -138,6 +138,13 @@ GEM
     nokogiri (1.15.4)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    oj (3.16.5)
+      bigdecimal (>= 3.0)
+      ostruct (>= 0.2)
+    ostruct (0.6.0)
+    panko_serializer (0.8.2)
+      activesupport
+      oj (> 3.11.0, < 4.0.0)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -213,6 +220,7 @@ DEPENDENCIES
   debug
   jbuilder
   mongoid (~> 8.1.2)
+  panko_serializer
   pry-byebug
   puma (~> 5.0)
   rack-cors
