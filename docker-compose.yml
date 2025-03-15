@@ -3,7 +3,7 @@ version: "3"
 services:
   mongodb:
     image: mongodb/mongodb-community-server
-    container_name: activity-api-mongodb
+    container_name: transaction-builder-service-mongodb
     ports:
       - "27017:27017"
     volumes:

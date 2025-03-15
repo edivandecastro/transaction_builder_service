@@ -1,6 +1,6 @@
 module Form
   module Tag
-    class Select < ActivityField
+    class Select < TransactionField
     end
   end
 end

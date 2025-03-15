@@ -1,6 +1,6 @@
 module Form
   module Tag
-    class TextArea < ActivityField
+    class TextArea < Schema::TransactionField
     end
   end
 end

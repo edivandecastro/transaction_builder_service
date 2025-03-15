@@ -1,4 +1,4 @@
-tag_id = AttributeSpecification.new(
+tag_id = Schema::AttributeSpecification.new(
   name: 'tag_id',
   attribute_type: 'String',
   value: '',
@@ -16,7 +16,7 @@ tag_id = AttributeSpecification.new(
   ]
 )
 
-name = AttributeSpecification.new(
+name = Schema::AttributeSpecification.new(
   name: 'name',
   attribute_type: 'String',
   value: '',
@@ -34,7 +34,7 @@ name = AttributeSpecification.new(
   ]
 )
 
-value = AttributeSpecification.new(
+value = Schema::AttributeSpecification.new(
   name: 'value',
   attribute_type: 'String',
   value: '',
@@ -52,7 +52,7 @@ value = AttributeSpecification.new(
   ]
 )
 
-_class = AttributeSpecification.new(
+_class = Schema::AttributeSpecification.new(
   name: '_class',
   attribute_type: 'String',
   value: '',
@@ -70,7 +70,7 @@ _class = AttributeSpecification.new(
   ]
 )
 
-_type = AttributeSpecification.new(
+_type = Schema::AttributeSpecification.new(
   name: '_type',
   attribute_type: 'String',
   value: 'Form::Input::Button',
@@ -89,7 +89,7 @@ _type = AttributeSpecification.new(
   ]
 )
 
-disabled = AttributeSpecification.new(
+disabled = Schema::AttributeSpecification.new(
   name: 'disabled',
   attribute_type: 'Boolean',
   value: '',
@@ -107,7 +107,7 @@ disabled = AttributeSpecification.new(
   ]
 )
 
-input_type = AttributeSpecification.new(
+input_type = Schema::AttributeSpecification.new(
   name: 'input_type',
   attribute_type: 'String',
   value: 'button',
@@ -125,7 +125,7 @@ input_type = AttributeSpecification.new(
   ]
 )
 
-accesskey = AttributeSpecification.new(
+accesskey = Schema::AttributeSpecification.new(
   name: 'accesskey',
   attribute_type: 'String',
   value: '',
@@ -143,7 +143,7 @@ accesskey = AttributeSpecification.new(
   ]
 )
 
-placeholder = AttributeSpecification.new(
+placeholder = Schema::AttributeSpecification.new(
   name: 'placeholder',
   attribute_type: 'String',
   value: '',
@@ -161,7 +161,7 @@ placeholder = AttributeSpecification.new(
   ]
 )
 
-pattern = AttributeSpecification.new(
+pattern = Schema::AttributeSpecification.new(
   name: 'pattern',
   attribute_type: 'Boolean',
   value: '',
@@ -179,7 +179,7 @@ pattern = AttributeSpecification.new(
   ]
 )
 
-title = AttributeSpecification.new(
+title = Schema::AttributeSpecification.new(
   name: 'title',
   attribute_type: 'Boolean',
   value: '',
@@ -197,7 +197,7 @@ title = AttributeSpecification.new(
   ]
 )
 
-maxlength = AttributeSpecification.new(
+maxlength = Schema::AttributeSpecification.new(
   name: 'maxlength',
   attribute_type: 'Boolean',
   value: '',
@@ -215,7 +215,7 @@ maxlength = AttributeSpecification.new(
   ]
 )
 
-minlength = AttributeSpecification.new(
+minlength = Schema::AttributeSpecification.new(
   name: 'minlength',
   attribute_type: 'Boolean',
   value: '',
@@ -233,7 +233,7 @@ minlength = AttributeSpecification.new(
   ]
 )
 
-size = AttributeSpecification.new(
+size = Schema::AttributeSpecification.new(
   name: 'size',
   attribute_type: 'Boolean',
   value: '',
@@ -251,7 +251,7 @@ size = AttributeSpecification.new(
   ]
 )
 
-autocomplete = AttributeSpecification.new(
+autocomplete = Schema::AttributeSpecification.new(
   name: 'autocomplete',
   attribute_type: 'Boolean',
   value: '',
@@ -269,7 +269,7 @@ autocomplete = AttributeSpecification.new(
   ]
 )
 
-autofocus = AttributeSpecification.new(
+autofocus = Schema::AttributeSpecification.new(
   name: 'autofocus',
   attribute_type: 'Boolean',
   value: '',
@@ -287,7 +287,7 @@ autofocus = AttributeSpecification.new(
   ]
 )
 
-spellcheck = AttributeSpecification.new(
+spellcheck = Schema::AttributeSpecification.new(
   name: 'spellcheck',
   attribute_type: 'Boolean',
   value: '',
@@ -305,7 +305,7 @@ spellcheck = AttributeSpecification.new(
   ]
 )
 
-label = AttributeSpecification.new(
+label = Schema::AttributeSpecification.new(
   name: 'label',
   attribute_type: 'Boolean',
   value: '',
@@ -323,7 +323,7 @@ label = AttributeSpecification.new(
   ]
 )
 
-required = AttributeSpecification.new(
+required = Schema::AttributeSpecification.new(
   name: 'required',
   attribute_type: 'Boolean',
   value: '',
@@ -341,7 +341,7 @@ required = AttributeSpecification.new(
   ]
 )
 
-_readonly = AttributeSpecification.new(
+_readonly = Schema::AttributeSpecification.new(
   name: '_readonly',
   attribute_type: 'Boolean',
   value: '',
@@ -359,99 +359,99 @@ _readonly = AttributeSpecification.new(
   ]
 )
 
-# if ActivityField.find_by(name: 'button').nil?
-#   ActivityField.create!(name: 'button') do |activity_field|
-#     activity_field.attribute_specifications.push(tag_id)
-#     activity_field.attribute_specifications.push(name)
-#     activity_field.attribute_specifications.push(value)
-#     activity_field.attribute_specifications.push(_class)
-#     activity_field.attribute_specifications.push(_type)
-#     activity_field.attribute_specifications.push(disabled)
-#     activity_field.attribute_specifications.push(input_type)
-#     activity_field.attribute_specifications.push(accesskey)
+# if Schema::TransactionField.find_by(name: 'button').nil?
+#   Schema::TransactionField.create!(name: 'button') do |transaction_field|
+#     transaction_field.attribute_specifications.push(tag_id)
+#     transaction_field.attribute_specifications.push(name)
+#     transaction_field.attribute_specifications.push(value)
+#     transaction_field.attribute_specifications.push(_class)
+#     transaction_field.attribute_specifications.push(_type)
+#     transaction_field.attribute_specifications.push(disabled)
+#     transaction_field.attribute_specifications.push(input_type)
+#     transaction_field.attribute_specifications.push(accesskey)
 #   end
 # end
 
-# if ActivityField.find_by(name: 'reset').nil?
-#   ActivityField.create!(name: 'reset') do |activity_field|
+# if Schema::TransactionField.find_by(name: 'reset').nil?
+#   Schema::TransactionField.create!(name: 'reset') do |transaction_field|
 #     _type.value = "Form::Input::Reset"
 #     input_type.value = 'reset'
 
-#     activity_field.attribute_specifications.push(tag_id)
-#     activity_field.attribute_specifications.push(name)
-#     activity_field.attribute_specifications.push(value)
-#     activity_field.attribute_specifications.push(_class)
-#     activity_field.attribute_specifications.push(_type)
-#     activity_field.attribute_specifications.push(disabled)
-#     activity_field.attribute_specifications.push(input_type)
-#     activity_field.attribute_specifications.push(accesskey)
+#     transaction_field.attribute_specifications.push(tag_id)
+#     transaction_field.attribute_specifications.push(name)
+#     transaction_field.attribute_specifications.push(value)
+#     transaction_field.attribute_specifications.push(_class)
+#     transaction_field.attribute_specifications.push(_type)
+#     transaction_field.attribute_specifications.push(disabled)
+#     transaction_field.attribute_specifications.push(input_type)
+#     transaction_field.attribute_specifications.push(accesskey)
 #   end
 # end
 
-# if ActivityField.find_by(name: 'submit').nil?
-#   ActivityField.create!(name: 'submit') do |activity_field|
+# if Schema::TransactionField.find_by(name: 'submit').nil?
+#   Schema::TransactionField.create!(name: 'submit') do |transaction_field|
 #     _type.value = "Form::Input::Submit"
 #     input_type.value = 'submit'
 
-#     activity_field.attribute_specifications.push(tag_id)
-#     activity_field.attribute_specifications.push(name)
-#     activity_field.attribute_specifications.push(value)
-#     activity_field.attribute_specifications.push(_class)
-#     activity_field.attribute_specifications.push(_type)
-#     activity_field.attribute_specifications.push(disabled)
-#     activity_field.attribute_specifications.push(input_type)
-#     activity_field.attribute_specifications.push(accesskey)
+#     transaction_field.attribute_specifications.push(tag_id)
+#     transaction_field.attribute_specifications.push(name)
+#     transaction_field.attribute_specifications.push(value)
+#     transaction_field.attribute_specifications.push(_class)
+#     transaction_field.attribute_specifications.push(_type)
+#     transaction_field.attribute_specifications.push(disabled)
+#     transaction_field.attribute_specifications.push(input_type)
+#     transaction_field.attribute_specifications.push(accesskey)
 #   end
 # end
 
-if ActivityField.find_by(name: 'Text Input').nil?
-  ActivityField.create!(name: 'Text Input', ) do |activity_field|
-    activity_field.group = 'Text::Inputs'
-    activity_field.icon_name = 'text-input-button'
+if Schema::TransactionField.find_by(name: 'Text Input').nil?
+  Schema::TransactionField.create!(name: 'Text Input', ) do |transaction_field|
+    transaction_field.group = 'Text::Inputs'
+    transaction_field.icon_name = 'text-input-button'
     _type.value = "Form::Input::Text"
     input_type.value = 'text'
-    activity_field.attribute_specifications.push(tag_id)
-    activity_field.attribute_specifications.push(name)
-    activity_field.attribute_specifications.push(value)
-    activity_field.attribute_specifications.push(_class)
-    activity_field.attribute_specifications.push(_type)
-    activity_field.attribute_specifications.push(disabled)
-    activity_field.attribute_specifications.push(input_type)
-    activity_field.attribute_specifications.push(placeholder)
-    activity_field.attribute_specifications.push(pattern)
-    activity_field.attribute_specifications.push(maxlength)
-    activity_field.attribute_specifications.push(minlength)
-    activity_field.attribute_specifications.push(size)
-    activity_field.attribute_specifications.push(autocomplete)
-    activity_field.attribute_specifications.push(autofocus)
-    activity_field.attribute_specifications.push(spellcheck)
-    activity_field.attribute_specifications.push(required)
-    activity_field.attribute_specifications.push(_readonly)
+    transaction_field.attribute_specifications.push(tag_id)
+    transaction_field.attribute_specifications.push(name)
+    transaction_field.attribute_specifications.push(value)
+    transaction_field.attribute_specifications.push(_class)
+    transaction_field.attribute_specifications.push(_type)
+    transaction_field.attribute_specifications.push(disabled)
+    transaction_field.attribute_specifications.push(input_type)
+    transaction_field.attribute_specifications.push(placeholder)
+    transaction_field.attribute_specifications.push(pattern)
+    transaction_field.attribute_specifications.push(maxlength)
+    transaction_field.attribute_specifications.push(minlength)
+    transaction_field.attribute_specifications.push(size)
+    transaction_field.attribute_specifications.push(autocomplete)
+    transaction_field.attribute_specifications.push(autofocus)
+    transaction_field.attribute_specifications.push(spellcheck)
+    transaction_field.attribute_specifications.push(required)
+    transaction_field.attribute_specifications.push(_readonly)
   end
 end
 
-if ActivityField.find_by(name: 'Email Input').nil?
-  ActivityField.create!(name: 'Email Input', ) do |activity_field|
-    activity_field.group = 'Text::Inputs'
-    activity_field.icon_name = 'email-input-button'
+if Schema::TransactionField.find_by(name: 'Email Input').nil?
+  Schema::TransactionField.create!(name: 'Email Input', ) do |transaction_field|
+    transaction_field.group = 'Text::Inputs'
+    transaction_field.icon_name = 'email-input-button'
     _type.value = "Form::Input::Email"
     input_type.value = 'email'
-    activity_field.attribute_specifications.push(tag_id)
-    activity_field.attribute_specifications.push(name)
-    activity_field.attribute_specifications.push(value)
-    activity_field.attribute_specifications.push(_class)
-    activity_field.attribute_specifications.push(_type)
-    activity_field.attribute_specifications.push(disabled)
-    activity_field.attribute_specifications.push(input_type)
-    activity_field.attribute_specifications.push(placeholder)
-    activity_field.attribute_specifications.push(pattern)
-    activity_field.attribute_specifications.push(maxlength)
-    activity_field.attribute_specifications.push(minlength)
-    activity_field.attribute_specifications.push(size)
-    activity_field.attribute_specifications.push(autocomplete)
-    activity_field.attribute_specifications.push(autofocus)
-    activity_field.attribute_specifications.push(spellcheck)
-    activity_field.attribute_specifications.push(required)
-    activity_field.attribute_specifications.push(_readonly)
+    transaction_field.attribute_specifications.push(tag_id)
+    transaction_field.attribute_specifications.push(name)
+    transaction_field.attribute_specifications.push(value)
+    transaction_field.attribute_specifications.push(_class)
+    transaction_field.attribute_specifications.push(_type)
+    transaction_field.attribute_specifications.push(disabled)
+    transaction_field.attribute_specifications.push(input_type)
+    transaction_field.attribute_specifications.push(placeholder)
+    transaction_field.attribute_specifications.push(pattern)
+    transaction_field.attribute_specifications.push(maxlength)
+    transaction_field.attribute_specifications.push(minlength)
+    transaction_field.attribute_specifications.push(size)
+    transaction_field.attribute_specifications.push(autocomplete)
+    transaction_field.attribute_specifications.push(autofocus)
+    transaction_field.attribute_specifications.push(spellcheck)
+    transaction_field.attribute_specifications.push(required)
+    transaction_field.attribute_specifications.push(_readonly)
   end
 end
