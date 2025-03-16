@@ -18,6 +18,10 @@ group :api_builder, :default do
   gem "panko_serializer"
 end
 
+group :pagination, :default do
+  gem "kaminari-mongoid"
+end
+
 group :others, :default do
   gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 end
