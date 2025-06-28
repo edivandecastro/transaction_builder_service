@@ -11,6 +11,7 @@ module V1
     end
 
     def create
+      pry
       transaction = Schema::Transaction.new(transaction_params)
 
       if transaction.save
@@ -26,7 +27,7 @@ module V1
     private
 
     def transaction_params
-      params.require(:transaction).permit(:name)
+      params.require(:transaction).permit(:name, :description)
     end
   end
 end

@@ -6,5 +6,6 @@ module Schema
     embeds_many :transaction_fields
 
     field :name, type: String
+    field :description, type: String
   end
 end
